@@ -1,0 +1,11 @@
+QuickTour Installation instructions
+
+Prerequisites:
+A MySQL Database with 3 tables:
+  A user table with this structure: name (VARCHAR), salt (VARCHAR), digest (VARCHAR)
+    The digest is encrypted with PHP's crypt function
+  A poi table with this structure: id (INT PRIMARY KEY AUTO_INCREMENT), lat (FLOAT), lng (FLOAT), place (VARCHAR), infoimg (VARCHAR), url (VARCHAR)
+  A paths table with this structure: id (INT PRIMARY KEY AUTO_INCREMENT), poi1 (INT NOT NULL), poi2 (INT NOT NULL), elnum (INT NOT NULL), lat (FLOAT), lng (FLOAT)
+PHP with file writing permissions
+A working web server
+
